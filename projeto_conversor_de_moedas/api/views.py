@@ -1,12 +1,28 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-from api.models import Conversor
-from api.serializers import ConversorModelSerializer
+from api.serializers import ExchangeRateSerializer
+
+__url_cotacoes = 'https://economia.awesomeapi.com.br/json/last/'
+# Ex.: https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL
 
 
 @api_view(['GET', 'POST'])
-def hello_world(request):
+def conversor(request):
+
+    from_currency = request.GET.get('from')
+    to_currency = request.GET.get('to')
+    amount = request.GET.get('amount')
+
+    url = __url_cotacoes + from_currency + '-' + to_currency
+
+    try:
+        # //q = requests.get(url)
+
+        # print(q)
+    except Exception:
+        print(Exception)
+
     if request.method == 'POST':
         return Response({'message': f'Hello {request.data.get("nome")}'})
     else:

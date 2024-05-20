@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import hello_world
+from .views import conversor
 app_name = 'api'
 
 
 urlpatterns = [
-    path('api', hello_world)
+    path('conversor/', conversor)
 ]
