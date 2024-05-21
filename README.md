@@ -6,7 +6,7 @@ API para conversão monetária.
 Foi feita usando o Django REST Framework .
 
 A conversão foi feita usando a [API de  Cotações](https://docs.awesomeapi.com.br/api-de-moedas) da Awesome API, que atualiza as cotações de diversas moedas em tempo real.
-
+ - preço de compra (bid) ou o preço de venda (ask) 
 
 # Como executar
 
@@ -51,6 +51,9 @@ python .\projeto_conversor_de_moedas\manage.py runserver
 ## Endpoints
 
 
-
 Exemplo:
-http://127.0.0.1:8000/api/conversor/?from=BTC&to=EUR&amount=123.45
+
+
+http://127.0.0.1:8000/api/exchange/?from=BTC&to=EUR&amount=123.45
+
+

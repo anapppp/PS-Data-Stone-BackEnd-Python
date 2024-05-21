@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import conversor
+from .views import exchange
+
 app_name = 'api'
 
-
 urlpatterns = [
-    path('conversor/', conversor)
+    path('exchange/', exchange)
 ]
