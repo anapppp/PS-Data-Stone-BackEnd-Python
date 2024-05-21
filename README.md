@@ -7,7 +7,7 @@ Esta API foi desenvolvida utilizando o Django REST Framework para realizar a con
 
 ## Como executar
 
-Primeiramente, assegure-se de que o python está instalado utilizando o omando `python -v` para isso. Em seguida, siga esses passos:
+Primeiramente, assegure-se de que o python está instalado utilizando o omando `python --version` para isso. Em seguida, siga esses passos:
 
 1. Clone este repositório
 ```
@@ -19,14 +19,18 @@ git clone git@github.com:anapppp/PS-Data-Stone-BackEnd-Python.git
 cd PS-Data-Stone-BackEnd-Python
 ```
 
-3. Instale o `virtualenv` e crie um ambiente virtual
-```
-pip install virtualenv
-```
+3. Crie um ambiente virtual
 
 ```
 python -m venv .venv
 ```
+
+Caso seja necessário, instale o virtualenv
+
+```
+pip install virtualenv
+```
+
 
 4. Ative o ambiente virtual
 
