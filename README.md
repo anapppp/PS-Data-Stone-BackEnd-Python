@@ -1,16 +1,13 @@
-# PS-Data-Stone-BackEnd-Python
-API para conversão monetária.
+# API para conversão monetária.
 
-# Descrição.
+## Descrição.
 
-Foi feita usando o Django REST Framework .
+Esta API foi desenvolvida utilizando o Django REST Framework para realizar a conversão de valor entre moedas em tempo real. A conversão é realizada com base nas cotações atualizadas de diversas moedas, utilizando a [API de  Cotações](https://docs.awesomeapi.com.br/api-de-moedas) da Awesome API. Esta API oferece informações como o preço de compra (bid) e o preço de venda (ask) das moedas.
 
-A conversão foi feita usando a [API de  Cotações](https://docs.awesomeapi.com.br/api-de-moedas) da Awesome API, que atualiza as cotações de diversas moedas em tempo real.
- - preço de compra (bid) ou o preço de venda (ask) 
 
-# Como executar
+## Como executar
 
-Primeiramente, assegure-se de que o python está instalado. Você pode usar o compando ``python -v` para isso.
+Primeiramente, assegure-se de que o python está instalado utilizando o omando `python -v` para isso. Em seguida, siga esses passos:
 
 1. Clone este repositório
 ```
@@ -22,7 +19,7 @@ git clone git@github.com:anapppp/PS-Data-Stone-BackEnd-Python.git
 cd PS-Data-Stone-BackEnd-Python
 ```
 
-2. Crie um ambiente virtual
+3. Instale o `virtualenv` e crie um ambiente virtual
 ```
 pip install virtualenv
 ```
@@ -31,29 +28,33 @@ pip install virtualenv
 python -m venv .venv
 ```
 
-3. Ative o ambiente virtual
+4. Ative o ambiente virtual
 
 ```
  .\.venv\Scripts\activate
 ```
 
-4. Instale todas as dependências
+5. Instale todas as dependências
 
 ```
 pip install -r .\requirements.txt
 ```
 
-5. Inicialize o servidor
+6. Inicialize o servidor
 ```
 python .\projeto_conversor_de_moedas\manage.py runserver
 ```
 
 ## Endpoints
 
+Por padrão, o servidor será executado na porta 8000. Portanto, a URL base para acessar a API será: http://localhost:8000/api/exchange/
 
-Exemplo:
+Para realizar uma conversão monetária, devem ser inseridos na URL da requisição os query params referentes ao par de moedas "from" e "to", e ao valor que se deseja converter "amount". Por exemplo:
 
-
-http://127.0.0.1:8000/api/exchange/?from=BTC&to=EUR&amount=123.45
-
+```ruby
+http://localhost:8000/api/exchange/?from=BRL&to=USD&amount=80
+```
+```ruby
+http://localhost:8000/api/exchange/?from=BTC&to=EUR&amount=123.45
+```
 
