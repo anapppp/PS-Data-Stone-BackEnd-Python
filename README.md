@@ -62,3 +62,22 @@ http://localhost:8000/api/exchange/?from=BRL&to=USD&amount=80
 http://localhost:8000/api/exchange/?from=BTC&to=EUR&amount=123.45
 ```
 
+## Saída
+
+O resultado é dado no formato Json. São retornados os campos: 
+- `nome` :  de qual moeda para qual moeda o valor será convertido
+- `data_cotação`: data e hora da cotação utilizada no cálculo
+- `valor_compra`: o valor convertido usando a taxa de câmbio de compra
+- `valor_venda`: o valor conversido usando a taxa de câmbio de venda
+
+Este é um exemplo da saida obtida pela API.
+
+
+```json
+{
+    "nome": "Real Brasileiro/Dólar Americano",
+    "data_cotacao": "2024-05-20 21:37:05",
+    "valor_compra": 15.664,
+    "valor_venda": 15.68
+}
+```
